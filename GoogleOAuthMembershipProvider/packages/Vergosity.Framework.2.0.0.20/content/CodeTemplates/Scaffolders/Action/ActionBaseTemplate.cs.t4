@@ -1,0 +1,45 @@
+<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+
+#region
+using Vergosity.Validation;
+using Action = Vergosity.Actions.Action;
+#endregion
+
+namespace <#= Model.Namespace #>
+{ 
+    internal class <#=Model.ClassName#> : Action
+    {
+        private readonly ValidationContext validationContext = new <#=Model.BaseName#>ValidationContext();
+        
+		/// <summary>
+		///   Initializes a new instance of the <see cref="ActionBase" /> class.
+		/// </summary>
+		protected <#=Model.ClassName#>()
+		{    
+		}
+
+		/// <summary>
+		///   Class implementors must override and implement this <see cref="ValidationContext" /> property. <see
+		///    cref="ValidationContext" /> is an abstract class, therefore, a sub-class that implements the abstract class will be needed.
+		/// </summary>
+		public override IValidationContext ValidationContext
+		{
+			get
+			{
+				return validationContext;
+			}
+		}
+
+        
+
+		/// <summary>
+		///   Use this method to validate the action. Validation may include any business rules, required data, and specific data formats.
+		/// </summary>
+		/// <returns> </returns>
+		protected override IValidationContext ValidateAction()
+		{
+			return validationContext.RenderRules(validationContext.BuildRules(this));
+		}
+	}
+}

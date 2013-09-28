@@ -1,0 +1,30 @@
+<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+
+using System;
+using Vergosity.Validation;
+using Vergosity.Validation.Rules;
+
+namespace <#= Model.Namespace #>
+{ 
+    internal class <#= Model.Name #>Rule : Rule
+	{
+		/// <summary>
+		/// 	Initializes a new instance of the <see cref="<#= Model.Name #>Rule" /> class.
+		/// </summary>
+		/// <param name="name"> The name. </param>
+		/// <param name="message"> The message. </param>
+		public <#= Model.Name #>Rule(string name, string message) : base(name, message)
+		{
+		}
+
+		/// <summary>
+		/// 	Renders this instance.
+		/// </summary>
+		/// <returns> </returns>
+		public override Result Render()
+		{
+			throw new NotImplementedException();
+		}
+	}
+}

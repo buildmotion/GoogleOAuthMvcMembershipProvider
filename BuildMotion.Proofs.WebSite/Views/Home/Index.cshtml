@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@* The view is required to implement section(s) defined in the [layout]; the following sectin [featured] is implemented by the view. *@
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p><img width="240" title="Hit the Road Running" alt="Hit the Road Running" src="../../Images/hit-the-road-running.jpg"> </p> <p>Sometimes the road traveled is as important as the destination. Building software is a complex endeavor. Using the Vergosity Framework provides the tools to create a consistent code base that is easily maintainable. Our framework contains dozens of extensibility end-points to create new features easily without adding fragility to your software. The performance of the framework is well-tested - and can sustain thousands of requests each second. </p>
+            
+        </div>
+    </section>
+}
+@* The following contetnt is rendered using the layout's [@RenderyBody()] placeholder. There is no section - this is the default content rendered using the template *@
+<h2>Build Something Amazing</h2>
+<p>AVOID THE FOLLOWING GOOGLE ERROR. Please read the Setup page to configure the web application for your specific environment and Google API settings. 
+    @Html.ActionLink("Click here for SETUP instructions.", "Index", "SetUp")
+    
+    <img src="~/Images/google-error.JPG" />
+</p>
+<h2>Open Door of Opportunity</h2> <p>Build Motion provides custom application services to meet demanding business requirements. Build Motion builds software right the first time with a focus on performance, extensibility, and scalability. Let Build Motion demonstrate how the right set of tools, processes, and patterns can create your solution.</p> <p>Think of your next project as an open door of opportunity. Consider implementing your solution using best practices, tools, and processes. </p> 
+	<p><img width="240" title="Open Door of Opportunity" alt="Open Door of Opportunity" src="../../Images/open-door-of-opportunity.jpg"></p>
+

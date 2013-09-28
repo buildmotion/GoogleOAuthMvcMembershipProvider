@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>1. Database Login Account</h2>
+<p>The application is using Entity Framework Code First. Therefore, there is a database initialization 
+    process that happens when the application loads up. The current initializer drops and creates the database on each run 
+    of the application. Since we need to create the database - the database user noted in the connection string requires the correct permissions (see below). 
+</p>
+
+<img src="~/Images/user-server-roles.JPG" />
+
+<h2>2. Database Connection String</h2>
+<p>Modify the connection string in the web.config file to use a local database.</p>
+
+<h2>3. Goolge ClientId and Client Secret</h2>
+<p>You will need a Google API account. Update the property configuration in the 
+    autofac section (see web.config). You can use "anonymous" for both values if 
+    you do not have a Google API account (not sure if the application will work). 
+
+</p>
+<p>
+    <b>Important: </b>The redirect URL in your Google API configuration needs to point to the ["security"] controller of the
+    web application. Example: http://www.yourdomainname.com/security
+</p>
+
+<h2>4. Update the [GoogleAppDomain] and [RestrictUsersToGoogleAppDomain] </h2>
+    <p>Update the [GoogleAppDomain] and [RestrictUsersToGoogleAppDomain] settings in the Autofac property settings. This should be a domain that
+    you want to restrict user access to. </p>

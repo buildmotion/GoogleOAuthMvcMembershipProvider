@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="BuildMotion.Entity.Google.UserInformation">
+    <Position X="3" Y="1" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACAEAAACBABIIgIACCACAAAgAABAAAAAAASAAAAkg=</HashCode>
+      <FileName>Entity\Google\UserInformation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BuildMotion.Entity.Google.AuthorizationInformation">
+    <Position X="6.25" Y="1" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAQCACAACwAAAAABAAEAAAAAABAAAAAQAAEAA=</HashCode>
+      <FileName>Entity\Google\AuthorizationInformation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BuildMotion.Entity.Google.EmailInRole">
+    <Position X="3" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAACAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entity\Google\EmailInRole.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BuildMotion.Entity.Google.Role">
+    <Position X="5.25" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAgAAAAEAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entity\Google\Role.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

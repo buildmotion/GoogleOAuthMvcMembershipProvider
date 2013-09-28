@@ -1,0 +1,32 @@
+<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+#region
+
+using <#= Model.BaseNamespace #>.Vergosity.Rules;
+
+#endregion
+
+namespace <#= Model.Namespace #>
+{ 
+   public class <#= Model.Name #>Attribute : ValidationAttribute
+    {
+        public <#= Model.Name #>Attribute(string name, string failMessage) : base(name, failMessage)
+        {
+        }
+
+        #region Overrides of ValidationAttribute
+
+        /// <summary>
+        ///   Creates the rule.
+        /// </summary>
+        /// <param name="target"> </param>
+        /// <returns> </returns>
+        public override RulePolicy CreateRule(object target)
+        {
+            Rule = new <#= Model.Name #>Rule(RuleName, FailMessage, target);
+            return Rule;
+        }
+
+        #endregion
+    }
+}

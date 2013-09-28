@@ -1,0 +1,43 @@
+﻿@model BuildMotion.Membership.Entity.Google.Role
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create New Role</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken();
+    @Html.ValidationSummary(true);
+    
+    <fieldset>
+        <legend>Edit Role</legend>
+        @Html.HiddenFor(m => m.RoleId)
+        
+        <p>
+            @Html.TextBoxFor(m => m.Name, new {placeholder = "e.g., Admin, User, ReportUser"})
+            @Html.ValidationMessageFor(m => m.Name)
+            @Html.LabelFor(m => m.Name)
+        </p>
+        
+        <p>
+            @Html.TextAreaFor(m => m.Description, new {placeholder = "Enter a description for the role."})
+            @Html.ValidationMessageFor(m => m.Description)
+            @Html.LabelFor(m => m.Description)
+        </p>
+        
+        <p>
+            @Html.EditorFor(m => m.IsActive)
+            @Html.ValidationMessageFor(m => m.IsActive)
+            @Html.LabelFor(m => m.IsActive)
+        </p>
+        <p>
+            <input type="submit" value="Create"/>
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to Role List", "Index", "Roles")
+</div>

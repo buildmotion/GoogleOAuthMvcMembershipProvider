@@ -1,0 +1,19 @@
+﻿@model BuildMotion.Membership.Entity.Google.OAuthPrincipal
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Admin (Secure Page)</h2>
+<p>This page requires authentication and authorization. The user must be an admin.</p>
+
+<ul>
+    <li>
+        User Name: @Model.Identity.Name
+    </li>
+    <li>
+        IsAuthenticated: @Model.Identity.IsAuthenticated
+    </li>
+   
+</ul>
+

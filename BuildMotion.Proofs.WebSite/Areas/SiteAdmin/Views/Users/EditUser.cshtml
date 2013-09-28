@@ -1,0 +1,68 @@
+﻿@model BuildMotion.Proofs.WebSite.Areas.SiteAdmin.Models.ManageUserRolesModel
+
+@{
+    ViewBag.Title = "EditUser";
+}
+
+<h2>Edit User Information</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken();
+    @Html.ValidationSummary(true);
+    
+    <fieldset>
+        @*<legend>Edit Role</legend>*@
+        @Html.HiddenFor(m => m.User.Email)
+        @Html.HiddenFor(m => m.User.Id)
+        @Html.HiddenFor(m => m.User.Domain)
+        @Html.HiddenFor(m => m.User.FirstName)
+        @Html.HiddenFor(m => m.User.LastName)
+        @Html.HiddenFor(m => m.User.GoogleId)
+        @Html.HiddenFor(m => m.User.IsVerifiedEmail)
+        @Html.HiddenFor(m => m.User.Link)
+        @Html.HiddenFor(m => m.User.IsVerifiedEmail)
+        @Html.HiddenFor(m => m.User.FullName)
+        @Html.HiddenFor(m => m.User.Email)
+        
+        <p>
+            @Html.Label(Model.User.FullName)
+        </p>
+        
+        <p>
+            @Html.EditorFor(m => m.User.IsActive)
+            @Html.ValidationMessageFor(m => m.User.IsActive)
+            @Html.LabelFor(m => m.User.IsActive)
+        </p>
+        </fieldset>
+        
+    <fieldset>
+        <h2>User Roles:</h2>
+        <ul>
+            @foreach (var item in Model.AvailableRoles)
+            {
+                <li>
+                    <input 
+                        id="Role_@item.RoleId"
+                        type="checkbox"
+                        name="SelectedAvailableRoles"
+                        value="@item.RoleId"
+                        @(item.IsChecked ? "checked " : "")
+                        />
+                    <label for="Role_@(item.RoleId)">@item.Name</label>
+                </li>
+            }
+        </ul>
+    </fieldset>
+
+        <p>
+            <input type="submit" value="Save Changes"/>
+        </p>
+    
+    
+  
+}
+
+
+<div>
+    @Html.ActionLink("Back to Role & User List", "Index", "Roles")
+</div>

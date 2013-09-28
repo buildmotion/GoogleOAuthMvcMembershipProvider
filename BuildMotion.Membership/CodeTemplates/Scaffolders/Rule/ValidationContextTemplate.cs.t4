@@ -1,0 +1,27 @@
+<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+
+using System;
+using Vergosity.Actions;
+using Vergosity.Validation;
+using Action = Vergosity.Actions.Action;
+
+namespace <#= Model.Namespace #>
+{ 
+    internal class <#= Model.Name #>ValidationContext : ValidationContext
+	{
+		#region Overrides of ValidationContext
+
+		/// <summary>
+		///   Builds the rules.
+		/// </summary>
+		/// <param name="action"> The action. </param>
+		/// <returns> </returns>
+		public override RuleList BuildRules(Action action)
+		{
+			return RuleBuilderService.RetrieveRules(action);
+		}
+
+		#endregion
+	}
+}

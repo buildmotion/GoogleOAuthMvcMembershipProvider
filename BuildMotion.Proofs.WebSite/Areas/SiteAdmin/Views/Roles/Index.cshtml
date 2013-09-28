@@ -1,0 +1,87 @@
+﻿@model BuildMotion.Proofs.WebSite.Areas.SiteAdmin.Models.UsersRolesModel
+
+@{
+    ViewBag.Title = "Role & User Management";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New Role", "Create")
+</p>
+<table class="dataTable">
+    <tr>
+        <th class="dataHeader">
+            @Html.Label("Name")
+        </th>
+        <th class="dataHeader">
+            @Html.Label("Description")
+        </th>
+        <th class="=dataHeader">
+            @Html.Label("Is Active?")
+        </th>
+        <th class="dataHeader">
+            @Html.Label("Action")
+        </th>
+    </tr>
+
+    @foreach (var item in Model.Roles) {
+        <tr class="dataRow">
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {id = item.RoleId} )
+            </td>
+        </tr>
+    }
+
+</table>
+<p>&nbsp;</p>
+
+<h2>Users
+</h2>
+<table class="dataTable">
+    <tr>
+        <th class="dataHeader">
+            @Html.Label("Name")
+        </th>
+        <th class="dataHeader">
+            @Html.Label("Email")
+        </th>
+        <th class="dataHeader">
+            @Html.Label("Is Active")
+        </th>
+        <th class="dataHeader">
+            @Html.Label("Action")
+        </th>
+    </tr>
+
+    @foreach (var item in Model.Users) {
+        <tr class="dataRow">
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "EditUser", "Users", new {emailAddress = item.Email}, null)
+            </td>
+        </tr>
+    }
+
+</table>
+<p>&nbsp;</p>
+@*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@

@@ -1,0 +1,1 @@
+﻿A placeholder file. The folder contains the business actions, rules, and attributes. The Scaffolder templates create items in this folder/namespace.

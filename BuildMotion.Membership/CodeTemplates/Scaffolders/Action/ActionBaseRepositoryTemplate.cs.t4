@@ -1,0 +1,85 @@
+<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+
+#region
+<#if(Model.UseProviderRepository){#>using System;<#}#>
+using Vergosity.Validation;
+using Action = Vergosity.Actions.Action;
+#endregion
+
+namespace <#= Model.Namespace #>
+{ 
+    internal class <#=Model.ClassName#> : Action
+    {
+        <#if(Model.UseProviderRepository){#>
+		private readonly <#=Model.BaseName#>ProviderBase provider;
+		private readonly I<#=Model.BaseName#>Repository repository;
+        <#}#>
+		private readonly ValidationContext validationContext = new <#=Model.BaseName#>ValidationContext();
+        
+		/// <summary>
+		///   Initializes a new instance of the <see cref="ActionBase" /> class.
+		/// </summary>
+		/// <param name="provider"> The provider. </param>
+		protected <#=Model.ClassName#>(<#if(Model.UseProviderRepository){#><#=Model.BaseName#>ProviderBase provider<#}#>)
+		{
+            <#if(Model.UseProviderRepository){#>
+		    if(provider == null)
+			{
+				throw new ArgumentNullException("provider");
+			}
+			if(provider.Repository == null)
+			{
+				throw new ArgumentNullException("repository");
+			}
+			this.provider = provider;
+			repository = provider.Repository;
+            <#}#>
+		}
+
+		/// <summary>
+		///   Class implementors must override and implement this <see cref="ValidationContext" /> property. <see
+		///    cref="ValidationContext" /> is an abstract class, therefore, a sub-class that implements the abstract class will be needed.
+		/// </summary>
+		public override IValidationContext ValidationContext
+		{
+			get
+			{
+				return validationContext;
+			}
+		}
+
+        <# if(Model.UseProviderRepository){ #>
+		/// <summary>
+		///   Gets the provider.
+		/// </summary>
+		public <#=Model.BaseName#>ProviderBase Provider
+		{
+			get
+			{
+				return provider;
+			}
+		}
+
+		/// <summary>
+		///   Gets the repository.
+		/// </summary>
+		public I<#=Model.BaseName#>Repository Repository
+		{
+			get
+			{
+				return repository;
+			}
+		}
+        <#    } #>
+
+		/// <summary>
+		///   Use this method to validate the action. Validation may include any business rules, required data, and specific data formats.
+		/// </summary>
+		/// <returns> </returns>
+		protected override IValidationContext ValidateAction()
+		{
+			return validationContext.RenderRules(validationContext.BuildRules(this));
+		}
+	}
+}

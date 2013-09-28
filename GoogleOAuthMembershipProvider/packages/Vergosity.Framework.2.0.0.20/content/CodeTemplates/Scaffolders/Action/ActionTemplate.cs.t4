@@ -1,0 +1,33 @@
+<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+
+#region
+
+using System;
+using Vergosity.Actions;
+#endregion
+
+namespace <#= Model.Namespace #>
+{ 
+    internal class <#=Model.ClassName#>Action : ActionBase
+    {
+		/// <summary>
+        ///   Does this instance.
+        /// </summary>
+        public override void PerformAction()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        ///   Use to validate the resultDetails of the action. The implementation may include any event or KPI logging.
+        /// </summary>
+        /// <returns> </returns>
+        protected override ActionResult ValidateActionResult()
+        {
+			throw new NotImplementedException();
+			//this.Result = ActionResult.Success;
+			//return Result
+        }
+	}
+}

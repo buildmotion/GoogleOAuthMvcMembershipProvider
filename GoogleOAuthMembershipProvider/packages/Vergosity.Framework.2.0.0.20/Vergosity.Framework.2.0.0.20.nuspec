@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Vergosity.Framework</id>
+    <version>2.0.0.20</version>
+    <title>Vergosity .NET Business Logic &amp; Rules Framework</title>
+    <authors>Mateo Valencia</authors>
+    <owners>Mateo Valencia</owners>
+    <licenseUrl>http://www.buildmotion.com/vergosity/license</licenseUrl>
+    <projectUrl>http://www.buildmotion.com/vergosity/</projectUrl>
+    <iconUrl>http://www.vergosity.com/vergosity.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A .NET application framework to build amazing code. Create testable, extensible, and highly maintainable business logic. Includes a
+		rule and validation engine to process businss rules, poco validation, and business object validation. For more
+		information and sample applications, please visit www.buildmotion.com.</description>
+    <releaseNotes>The nuget release contains a valid license to use Vergosity. Follow the instructions in the !ReadMe!.txt file.</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <language />
+    <tags>.NET Application Framework Business Rules Data Validation Actions Rule Engine Validation Engine</tags>
+    <dependencies>
+      <dependency id="EntityFramework" version="4.1.10715.0" />
+      <dependency id="T4Scaffolding" version="1.0.8" />
+      <dependency id="T4Scaffolding.Core" version="1.0.0" />
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework=".NETFramework4.0" />
+      <frameworkAssembly assemblyName="System.Configuration" targetFramework=".NETFramework4.0" />
+    </frameworkAssemblies>
+    <references>
+      <reference file="Vergosity.dll" />
+      <reference file="Vergosity.Framework.Package.dll" />
+    </references>
+  </metadata>
+</package>
