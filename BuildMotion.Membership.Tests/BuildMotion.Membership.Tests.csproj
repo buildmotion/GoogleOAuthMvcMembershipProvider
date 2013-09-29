@@ -108,6 +108,9 @@
     <Reference Include="Moq">
       <HintPath>..\GoogleOAuthMembershipProvider\packages\Moq.4.1.1309.1617\lib\net40\Moq.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\GoogleOAuthMembershipProvider\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\GoogleOAuthMembershipProvider\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
     </Reference>
