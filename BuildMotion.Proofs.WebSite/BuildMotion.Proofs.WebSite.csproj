@@ -51,6 +51,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\GoogleOAuthMembershipProvider\packages\Autofac.Configuration.3.1.0\lib\net40\Autofac.Configuration.dll</HintPath>
     </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet">
+      <HintPath>..\GoogleOAuthMembershipProvider\packages\DotNetOpenAuth.AspNet.4.3.1.13153\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
     <Reference Include="DotNetOpenAuth.Core, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\GoogleOAuthMembershipProvider\packages\DotNetOpenAuth.Core.4.3.1.13153\lib\net45-full\DotNetOpenAuth.Core.dll</HintPath>
@@ -148,6 +151,9 @@
       <Private>True</Private>
       <HintPath>..\GoogleOAuthMembershipProvider\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\GoogleOAuthMembershipProvider\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
@@ -216,13 +222,13 @@
       <Private>True</Private>
       <HintPath>..\..\source\web\buildmotion.com\www.buildmotion.com\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="Vergosity, Version=2.1.4956.30692, Culture=neutral, PublicKeyToken=762d86f12726e7fc, processorArchitecture=MSIL">
+    <Reference Include="Vergosity, Version=2.2.5013.41031, Culture=neutral, PublicKeyToken=762d86f12726e7fc, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\GoogleOAuthMembershipProvider\packages\Vergosity.Framework.2.0.0.20\lib\net40\Vergosity.dll</HintPath>
+      <HintPath>..\GoogleOAuthMembershipProvider\packages\Vergosity.Framework.2.0.0.22\lib\net40\Vergosity.dll</HintPath>
     </Reference>
     <Reference Include="Vergosity.Framework.Package, Version=1.0.4953.37157, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\GoogleOAuthMembershipProvider\packages\Vergosity.Framework.2.0.0.20\lib\net40\Vergosity.Framework.Package.dll</HintPath>
+      <HintPath>..\GoogleOAuthMembershipProvider\packages\Vergosity.Framework.2.0.0.22\lib\net40\Vergosity.Framework.Package.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
       <HintPath>..\GoogleOAuthMembershipProvider\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
@@ -266,6 +272,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="!Vergosity-ReadMe!.txt" />
     <Content Include="Content\buildmotion.css" />
     <Content Include="Content\shCoreDefault.css" />
     <Content Include="Content\shThemeDefault.css" />
@@ -325,9 +332,6 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="buildmotion.lic">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Areas\SiteAdmin\Views\Web.config" />
     <Content Include="Areas\SiteAdmin\Views\Roles\Index.cshtml" />
     <Content Include="Areas\SiteAdmin\Views\Shared\_Layout.cshtml" />
@@ -338,6 +342,19 @@
     <Content Include="Areas\SiteAdmin\Views\Users\EditorTemplates\Role.cshtml" />
     <Content Include="Images\google-error.JPG" />
     <Content Include="packages.config" />
+    <Content Include="CodeTemplates\Scaffolders\Rule\ValidationContextTemplate.cs.t4" />
+    <Content Include="CodeTemplates\Scaffolders\Rule\ValidationContext.ps1" />
+    <Content Include="CodeTemplates\Scaffolders\Rule\RuleTemplate.cs.t4" />
+    <Content Include="CodeTemplates\Scaffolders\Rule\Rule.ps1" />
+    <Content Include="CodeTemplates\Scaffolders\Attribute\AttributeTemplate.cs.t4" />
+    <Content Include="CodeTemplates\Scaffolders\Attribute\Attribute.ps1" />
+    <Content Include="CodeTemplates\Scaffolders\Action\ActionTemplate.cs.t4" />
+    <Content Include="CodeTemplates\Scaffolders\Action\ActionBaseTemplate.cs.t4" />
+    <Content Include="CodeTemplates\Scaffolders\Action\ActionBaseRepositoryTemplate.cs.t4" />
+    <Content Include="CodeTemplates\Scaffolders\Action\ActionBaseRepository.ps1" />
+    <Content Include="CodeTemplates\Scaffolders\Action\ActionBase.ps1" />
+    <Content Include="CodeTemplates\Scaffolders\Action\Action.ps1" />
+    <Content Include="buildmotion.lic" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Images\hit-the-road-running.jpg" />
     <Content Include="Images\open-door-of-opportunity.jpg" />
@@ -358,6 +375,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\shBrushCSharp.js" />
     <Content Include="Scripts\shCore.js" />
+    <Content Include="Vergosity\!ReadMe!.txt" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
