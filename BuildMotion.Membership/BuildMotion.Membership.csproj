@@ -159,13 +159,13 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Vergosity, Version=2.1.4956.30692, Culture=neutral, PublicKeyToken=762d86f12726e7fc, processorArchitecture=MSIL">
+    <Reference Include="Vergosity, Version=2.2.5013.41031, Culture=neutral, PublicKeyToken=762d86f12726e7fc, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\GoogleOAuthMembershipProvider\packages\Vergosity.Framework.2.0.0.20\lib\net40\Vergosity.dll</HintPath>
+      <HintPath>..\GoogleOAuthMembershipProvider\packages\Vergosity.Framework.2.0.0.22\lib\net40\Vergosity.dll</HintPath>
     </Reference>
     <Reference Include="Vergosity.Framework.Package, Version=1.0.4953.37157, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\GoogleOAuthMembershipProvider\packages\Vergosity.Framework.2.0.0.20\lib\net40\Vergosity.Framework.Package.dll</HintPath>
+      <HintPath>..\GoogleOAuthMembershipProvider\packages\Vergosity.Framework.2.0.0.22\lib\net40\Vergosity.Framework.Package.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
